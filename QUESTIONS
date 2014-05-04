@@ -1,0 +1,23 @@
+PROJECT 4 WRITE-UP
+------------------
+
+1) Briefly explain how you implemented comparison queries and how they affected your control block's signals (in a few sentences).
+
+ANSWER
+
+
+2) Please list your control block's control signals, and briefly explain what each one does (in a sentence or less each).
+
+ANSWER
+
+
+3) What features (if any) of this assembly language do you like?
+
+ANSWER
+I like that the CQ instruction allows more flexibility in the comparisons compared to MIPS, where you have a choice between beq for just equal and writing multiple lines for every other kind of comparison. 
+
+4) What features (if any) of this assembly language do you not like?
+
+ANSWER
+I don't like that the CQ instruction, which is analogous to the BEQ instruction in MIPS, requires two lines to do the same instruction, whereas it can be done with a single line in MIPS.
+
