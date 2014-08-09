@@ -116,31 +116,47 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-anchor facing="east" height="6" width="6" x="97" y="67"/>
     </appear>
     <wire from="(390,230)" to="(400,230)"/>
+    <wire from="(750,430)" to="(790,430)"/>
     <wire from="(490,210)" to="(490,250)"/>
     <wire from="(330,230)" to="(340,230)"/>
     <wire from="(200,400)" to="(200,470)"/>
     <wire from="(200,80)" to="(550,80)"/>
     <wire from="(200,250)" to="(200,320)"/>
     <wire from="(430,250)" to="(430,290)"/>
+    <wire from="(700,430)" to="(720,430)"/>
     <wire from="(360,290)" to="(430,290)"/>
     <wire from="(390,230)" to="(390,240)"/>
+    <wire from="(570,450)" to="(580,450)"/>
     <wire from="(340,240)" to="(350,240)"/>
     <wire from="(850,80)" to="(850,100)"/>
+    <wire from="(540,430)" to="(580,430)"/>
     <wire from="(380,240)" to="(390,240)"/>
     <wire from="(450,190)" to="(480,190)"/>
+    <wire from="(680,390)" to="(680,410)"/>
+    <wire from="(790,430)" to="(830,430)"/>
     <wire from="(340,230)" to="(340,240)"/>
     <wire from="(490,250)" to="(490,260)"/>
+    <wire from="(790,430)" to="(790,540)"/>
     <wire from="(200,80)" to="(200,150)"/>
     <wire from="(960,100)" to="(960,320)"/>
     <wire from="(850,100)" to="(960,100)"/>
+    <wire from="(660,420)" to="(670,420)"/>
+    <wire from="(730,450)" to="(730,490)"/>
+    <wire from="(660,390)" to="(660,420)"/>
+    <wire from="(620,440)" to="(670,440)"/>
     <wire from="(200,620)" to="(960,620)"/>
+    <wire from="(610,390)" to="(660,390)"/>
     <wire from="(360,260)" to="(360,290)"/>
     <wire from="(960,400)" to="(960,620)"/>
+    <wire from="(480,430)" to="(500,430)"/>
     <wire from="(200,550)" to="(200,620)"/>
     <wire from="(850,80)" to="(960,80)"/>
+    <wire from="(570,540)" to="(790,540)"/>
     <wire from="(590,80)" to="(850,80)"/>
     <wire from="(430,250)" to="(490,250)"/>
     <wire from="(960,80)" to="(960,100)"/>
+    <wire from="(680,350)" to="(680,370)"/>
+    <wire from="(570,450)" to="(570,540)"/>
     <wire from="(510,190)" to="(520,190)"/>
     <comp lib="0" loc="(450,190)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -149,6 +165,15 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(380,240)" name="Register">
       <a name="width" val="1"/>
+    </comp>
+    <comp lib="0" loc="(830,430)" name="Tunnel">
+      <a name="width" val="24"/>
+      <a name="label" val="nextPC"/>
+    </comp>
+    <comp lib="0" loc="(610,390)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="24"/>
+      <a name="label" val="Immediate Value"/>
     </comp>
     <comp lib="6" loc="(905,96)" name="Text">
       <a name="text" val="NPC MODULE"/>
@@ -187,11 +212,40 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="east"/>
       <a name="label" val="Jump Cmd"/>
     </comp>
+    <comp lib="1" loc="(680,390)" name="NOT Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(730,490)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(480,430)" name="Constant"/>
     <comp lib="0" loc="(570,90)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="CQ_PASSED"/>
       <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="3" loc="(620,440)" name="Adder">
+      <a name="width" val="24"/>
+    </comp>
+    <comp lib="4" loc="(750,430)" name="Register">
+      <a name="width" val="24"/>
+      <a name="label" val="pc"/>
+    </comp>
+    <comp lib="0" loc="(680,350)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="Jump Cmd"/>
+    </comp>
+    <comp lib="0" loc="(540,430)" name="Bit Extender">
+      <a name="in_width" val="1"/>
+      <a name="out_width" val="24"/>
+    </comp>
+    <comp lib="2" loc="(700,430)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="width" val="24"/>
+      <a name="enable" val="false"/>
     </comp>
     <comp lib="0" loc="(920,360)" name="Pin">
       <a name="facing" val="west"/>
