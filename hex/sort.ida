@@ -1,0 +1,39 @@
+        COPY %a0 0    # pointer to the 1st element
+        COPY %a1 5 # number of elements to sort
+        CALL @SORT  
+        HALT
+        
+SORT:                 # sort starts here
+
+while:
+
+COPY %t0 0 #swapped = false
+COPY %t1 1 #i = 1
+
+for:
+
+SUB %t2 %t1 1
+LOAD %t3 %a0 %t2
+LOAD %t4 %a0 %t1
+
+CMPS %t3 %t4
+JUMP ?LE @EndFor
+
+
+SAVE %t3 %a0 %t1
+SAVE %t4 %a0 %t2
+COPY %t0 0
+
+JUMP @EndFor
+
+
+EndFor:
+
+ADD %t1 %t1 1 #i++
+CMPS %t1 %a1 #if i<n
+JUMP ?GE @for
+
+CMPS %t0 1
+JUMP ?EQ @while
+
+JUMP %ra
