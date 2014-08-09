@@ -70,8 +70,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   </options>
   <mappings>
     <tool lib="6" map="Button2" name="Menu Tool"/>
-    <tool lib="6" map="Button3" name="Menu Tool"/>
     <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
   </mappings>
   <toolbar>
     <tool lib="6" name="Poke Tool"/>
@@ -115,34 +115,83 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="8" pin="240,200" width="8" x="56" y="46"/>
       <circ-anchor facing="east" height="6" width="6" x="97" y="67"/>
     </appear>
-    <wire from="(960,400)" to="(960,620)"/>
-    <wire from="(200,80)" to="(200,150)"/>
-    <wire from="(850,80)" to="(850,100)"/>
-    <wire from="(960,100)" to="(960,320)"/>
-    <wire from="(850,100)" to="(960,100)"/>
-    <wire from="(200,550)" to="(200,620)"/>
-    <wire from="(850,80)" to="(960,80)"/>
+    <wire from="(390,230)" to="(400,230)"/>
+    <wire from="(490,210)" to="(490,250)"/>
+    <wire from="(330,230)" to="(340,230)"/>
     <wire from="(200,400)" to="(200,470)"/>
-    <wire from="(590,80)" to="(850,80)"/>
     <wire from="(200,80)" to="(550,80)"/>
     <wire from="(200,250)" to="(200,320)"/>
-    <wire from="(960,80)" to="(960,100)"/>
+    <wire from="(430,250)" to="(430,290)"/>
+    <wire from="(360,290)" to="(430,290)"/>
+    <wire from="(390,230)" to="(390,240)"/>
+    <wire from="(340,240)" to="(350,240)"/>
+    <wire from="(850,80)" to="(850,100)"/>
+    <wire from="(380,240)" to="(390,240)"/>
+    <wire from="(450,190)" to="(480,190)"/>
+    <wire from="(340,230)" to="(340,240)"/>
+    <wire from="(490,250)" to="(490,260)"/>
+    <wire from="(200,80)" to="(200,150)"/>
+    <wire from="(960,100)" to="(960,320)"/>
+    <wire from="(850,100)" to="(960,100)"/>
     <wire from="(200,620)" to="(960,620)"/>
-    <comp lib="0" loc="(570,90)" name="Pin">
-      <a name="facing" val="south"/>
+    <wire from="(360,260)" to="(360,290)"/>
+    <wire from="(960,400)" to="(960,620)"/>
+    <wire from="(200,550)" to="(200,620)"/>
+    <wire from="(850,80)" to="(960,80)"/>
+    <wire from="(590,80)" to="(850,80)"/>
+    <wire from="(430,250)" to="(490,250)"/>
+    <wire from="(960,80)" to="(960,100)"/>
+    <wire from="(510,190)" to="(520,190)"/>
+    <comp lib="0" loc="(450,190)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="32"/>
+      <a name="label" val="inst"/>
+    </comp>
+    <comp lib="4" loc="(380,240)" name="Register">
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="6" loc="(905,96)" name="Text">
+      <a name="text" val="NPC MODULE"/>
+      <a name="font" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="4" loc="(510,190)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="Instruction Register"/>
+    </comp>
+    <comp lib="0" loc="(240,510)" name="Pin">
+      <a name="width" val="24"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="CQ_PASSED"/>
-      <a name="labelloc" val="north"/>
+      <a name="label" val="JUMP_ADDRESS"/>
     </comp>
     <comp lib="0" loc="(240,360)" name="Pin">
       <a name="width" val="24"/>
       <a name="tristate" val="false"/>
       <a name="label" val="CURRENT_PC"/>
     </comp>
+    <comp lib="0" loc="(520,190)" name="Tunnel">
+      <a name="width" val="32"/>
+      <a name="label" val="current inst"/>
+    </comp>
+    <comp lib="1" loc="(420,230)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
     <comp lib="0" loc="(240,200)" name="Pin">
       <a name="width" val="32"/>
       <a name="tristate" val="false"/>
       <a name="label" val="INSTRUCTION"/>
+    </comp>
+    <comp lib="0" loc="(420,230)" name="Tunnel">
+      <a name="label" val="prev jump"/>
+    </comp>
+    <comp lib="0" loc="(330,230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Jump Cmd"/>
+    </comp>
+    <comp lib="0" loc="(570,90)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="CQ_PASSED"/>
+      <a name="labelloc" val="north"/>
     </comp>
     <comp lib="0" loc="(920,360)" name="Pin">
       <a name="facing" val="west"/>
@@ -151,14 +200,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="NEXT_PC"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="6" loc="(905,96)" name="Text">
-      <a name="text" val="NPC MODULE"/>
-      <a name="font" val="SansSerif bold 14"/>
-    </comp>
-    <comp lib="0" loc="(240,510)" name="Pin">
-      <a name="width" val="24"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="JUMP_ADDRESS"/>
+    <comp lib="0" loc="(490,260)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clk"/>
     </comp>
   </circuit>
 </project>
