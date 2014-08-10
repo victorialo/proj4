@@ -651,6 +651,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="ALU_RESULT"/>
     </comp>
+    <comp lib="1" loc="(1210,310)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="4"/>
+    </comp>
     <comp lib="0" loc="(1570,880)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CQ Output"/>
@@ -688,6 +692,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="1" loc="(1140,310)" name="AND Gate">
       <a name="facing" val="south"/>
+      <a name="inputs" val="4"/>
     </comp>
     <comp lib="0" loc="(1110,890)" name="Constant">
       <a name="width" val="4"/>
