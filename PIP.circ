@@ -23,6 +23,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </tool>
     <tool name="Pin">
       <a name="facing" val="north"/>
+      <a name="output" val="true"/>
     </tool>
     <tool name="Probe">
       <a name="facing" val="north"/>
@@ -70,8 +71,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   </options>
   <mappings>
     <tool lib="6" map="Button2" name="Menu Tool"/>
-    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
     <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
   </mappings>
   <toolbar>
     <tool lib="6" name="Poke Tool"/>
@@ -121,27 +122,31 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="10" pin="1070,650" width="10" x="65" y="145"/>
       <circ-anchor facing="east" height="6" width="6" x="77" y="107"/>
     </appear>
-    <wire from="(600,860)" to="(1110,860)"/>
-    <wire from="(160,70)" to="(300,70)"/>
-    <wire from="(1110,50)" to="(1110,410)"/>
-    <wire from="(160,510)" to="(160,610)"/>
-    <wire from="(540,50)" to="(1110,50)"/>
     <wire from="(1110,690)" to="(1110,860)"/>
     <wire from="(300,50)" to="(500,50)"/>
+    <wire from="(600,860)" to="(1110,860)"/>
     <wire from="(1110,510)" to="(1110,610)"/>
     <wire from="(160,50)" to="(300,50)"/>
     <wire from="(200,460)" to="(1070,460)"/>
+    <wire from="(160,70)" to="(300,70)"/>
     <wire from="(160,690)" to="(160,860)"/>
     <wire from="(160,50)" to="(160,70)"/>
+    <wire from="(1110,50)" to="(1110,410)"/>
     <wire from="(160,860)" to="(560,860)"/>
     <wire from="(300,50)" to="(300,70)"/>
+    <wire from="(160,510)" to="(160,610)"/>
+    <wire from="(540,50)" to="(1110,50)"/>
     <wire from="(160,70)" to="(160,410)"/>
     <wire from="(200,650)" to="(1070,650)"/>
-    <comp lib="0" loc="(1070,650)" name="Pin">
+    <comp lib="6" loc="(230,66)" name="Text">
+      <a name="text" val="PIPELINE MODULE"/>
+      <a name="font" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="0" loc="(1070,460)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="24"/>
-      <a name="label" val="PC_OUT"/>
+      <a name="width" val="32"/>
+      <a name="label" val="INSTRUCTION_OUT"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(520,60)" name="Pin">
@@ -150,12 +155,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="CQ_PASSED"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(1070,460)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="label" val="INSTRUCTION_OUT"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="0" loc="(200,650)" name="Pin">
+      <a name="width" val="24"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="PC_IN"/>
     </comp>
     <comp lib="0" loc="(200,460)" name="Pin">
       <a name="width" val="32"/>
@@ -168,14 +171,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="CLOCK"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="6" loc="(230,66)" name="Text">
-      <a name="text" val="PIPELINE MODULE"/>
-      <a name="font" val="SansSerif bold 14"/>
-    </comp>
-    <comp lib="0" loc="(200,650)" name="Pin">
+    <comp lib="0" loc="(1070,650)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
       <a name="width" val="24"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="PC_IN"/>
+      <a name="label" val="PC_OUT"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>
