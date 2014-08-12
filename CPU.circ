@@ -522,6 +522,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(2120,460)" to="(2120,550)"/>
     <wire from="(1520,500)" to="(1520,550)"/>
     <wire from="(2130,600)" to="(2130,640)"/>
+    <wire from="(380,1160)" to="(390,1160)"/>
     <wire from="(540,810)" to="(650,810)"/>
     <wire from="(660,340)" to="(670,340)"/>
     <wire from="(1870,520)" to="(1870,550)"/>
@@ -560,7 +561,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(2250,380)" to="(2380,380)"/>
     <wire from="(370,860)" to="(390,860)"/>
     <wire from="(2270,1170)" to="(2270,1290)"/>
-    <wire from="(370,1160)" to="(390,1160)"/>
     <wire from="(430,410)" to="(430,440)"/>
     <wire from="(810,1160)" to="(870,1160)"/>
     <wire from="(2280,480)" to="(2280,550)"/>
@@ -704,6 +704,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="ALU_SOURCE_Y"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(380,1160)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="24"/>
+      <a name="label" val="CURRENT_PC"/>
+    </comp>
     <comp lib="0" loc="(390,860)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -805,11 +810,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="east"/>
       <a name="width" val="4"/>
       <a name="label" val="$RS"/>
-    </comp>
-    <comp lib="0" loc="(370,1160)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="24"/>
-      <a name="label" val="MEM_ADDR"/>
     </comp>
     <comp lib="0" loc="(1110,1220)" name="Tunnel">
       <a name="facing" val="east"/>
